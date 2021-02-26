@@ -17,7 +17,7 @@ can be created by rearranging that number's digits.
 import sys
 
 def main():
-    # next_biggest_number(sys.argv[1])
+    next_biggest_number(sys.argv[1])
 
 
 
