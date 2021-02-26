@@ -19,12 +19,6 @@ import sys
 def main():
     # next_biggest_number(sys.argv[1])
 
-    next_biggest_number(71652)
-    print("correct answer is: ", 72156)
-
-    print("")
-    next_biggest_number(16332)
-    print("correct answer is: ", 21336)
 
 
 
