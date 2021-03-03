@@ -24,56 +24,56 @@ def main():
 
 def next_biggest_number(num):
     #TODO: Implement me!
-    numStr = str(num)
-    print("Starting number is: ", numStr)
+    num_str = str(num)
+    print("Starting number is: ", num_str)
 
 
     #Convert input to array
-    numList = [int(i) for i in numStr]
+    num_list = [int(i) for i in num_str]
 
     
 
     #find bigger number starting from end of array 
-    for i in range(len(numStr) - 1, 0, -1):
-      if numStr[i] > numStr[i - 1]:
+    for i in range(len(num_str) - 1, 0, -1):
+      if num_str[i] > num_str[i - 1]:
         break 
 
     # Return -1 if no greater number possible
-    if i == 1 and numStr[i] <= numStr[i - 1]:
+    if i == 1 and num_str[i] <= num_str[i - 1]:
       print(-1)
       return -1
         
     # Identify smallest index to the left of 'bigger'
-    indxPos = i
+    indx_pos = i
 
-    for j in range(i + 1, len(numStr)):
-      if numStr[j] > numStr[indxPos - 1] and numStr[j] < numStr[i]:
-        indxPos = j
+    for j in range(i + 1, len(num_str)):
+      if num_str[j] > num_str[indx_pos - 1] and num_str[j] < num_str[i]:
+        indx_pos = j
         #break
 
     # Swap the smaller with bigger
-    numList[indxPos], numList[i-1] = numList[i-1], numList[indxPos]
+    num_list[indx_pos], num_list[i-1] = num_list[i-1], num_list[indx_pos]
 
     # Convert swapped list to string
-    newStr = ""
-    for char in numList:
-        newStr += str(char)
+    new_str = ""
+    for char in num_list:
+        new_str += str(char)
 
     #Sort digits after bigger into ascending open
-    digits = sorted(numList[i:])
+    digits = sorted(num_list[i:])
 
      #Make revised list
-    newNumList = numList[:i] + digits
+    new_num_list = num_list[:i] + digits
  
   # Convert array back to string, then number
-    newStr = ""
-    for char in newNumList:
-      newStr += str(char)
-      newNewStr = int(newStr)
+    new_str = ""
+    for char in new_num_list:
+      new_str += str(char)
+      new_new_str = int(new_str)
 
   # Return next greatest number
-    print("Next greatest number is: ", newNewStr)
-    return newNewStr
+    print("Next greatest number is: ", new_new_str)
+    return new_new_str
             
     # return 0
 
